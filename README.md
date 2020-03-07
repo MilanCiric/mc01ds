@@ -15,7 +15,7 @@ This is not a final version of this header file, so it will be more in the time.
     - **```T pop()```**                   - get one object of T type from the stack, and decrease number of elements
     - **```T getTop()```**                - get top object of T type from the stack
 
-    For example, creation of stack that contains of 10 ObjType values will be:   *```stackAsArray<ObjType> name(10)```*
+    For example, creation of stack that contains of 10 ObjType values will be:   **```stackAsArray<ObjType> name(10)```**
     
 2. ## Queue
 3. ## Deck
