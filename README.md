@@ -24,7 +24,7 @@ Queue is also auxilary structure for more complex structures where can be insert
 - **```T dequeue()```**                 - get head element from the queue and remove it from the queue
 - **```bool enqueue(T obj)```**         - set new tail element into the queue
 
-For example, creation of queue that consists of 10 ObjType values will be: **```QueueAsArray<ObjType> que(10)```*
+For example, creation of queue that consists of 10 ObjType values will be: **```QueueAsArray<ObjType> que(10)```**
 
 3. ## Deck
 4. ## Single Linked lists
@@ -32,4 +32,4 @@ For example, creation of queue that consists of 10 ObjType values will be: **```
 6. ## Binary Search Tree
 7. ## Graph
 
-
+For more information about how to use these structures look at the cpp file that is test file of these structures.
