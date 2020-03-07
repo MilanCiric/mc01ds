@@ -204,6 +204,8 @@ Classes that are make our graph are:
     - **```long findPathBreadth(LinkedNode<t, w>* ptr, LinkedNode<t, w>* pEnd, t* arPath, int* lPath)```** - Function that finds the path, based on pointer values of nodes
     
 
-For example, creation of Graph that consists of ObjType elements with WeightType will be: **```GraphAsLists<ObjType, WeightType> graf```**. Also graph use single linked list as auxilary structure so we dont need initial size.
+For example, creation of Graph that consists of ObjType elements with WeightType will be: 
+**```GraphAsLists<ObjType, WeightType> graf```**. 
+Also graph use single linked list as auxilary structure so we dont need initial size.
 
 For more information about how to use these structures look at the cpp file that is test file of these structures.
