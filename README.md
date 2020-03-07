@@ -39,7 +39,7 @@ Deck structure is similar to the queue structure but in this version it can be p
 - **```T getTailEl()```** - get tail element, but don't remove it from the deck
 - **```T dequeueTail()```** - get tail element and remove it from the deck
 
-For example, creation of deck that consists of 10 ObjType values will be: **```DeckAsArray<ObjType> deck(10);```**
+For example, creation of deck that consists of 10 ObjType values will be: **```DeckAsArray<ObjType> deck(10)```**
 
 4. ## Single Linked lists
 
@@ -77,6 +77,9 @@ Single linked lists are structures that is used also as auxilary structures, and
     - **```void invertionSort()```** - Function for sorting elements
     - **```void insertInSorted(SLLNode<T> *ptr)```** - insert a new node into sorted list without destruct order after sort, when it's pointer is passed
     - **```void insertInSorted(T el)```** - insert a new node into sorted list without destruct order after sort, when it's information is passed
+
+For example, creation of single linked list of ObjType elements will be: **```SLList<ObjType> list```**
+List don't need initial value, beacue, list can exists even if it empty, so simpy adding one element into the list we get the list, and so on.
 
 5. ## Hash Tables (Chainned and Scattered)
 
