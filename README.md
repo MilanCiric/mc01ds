@@ -50,33 +50,33 @@ Single linked lists are structures that is used also as auxilary structures, and
     - **```inline bool operator==(const SLLNode& node)```** - overloaded operator == when the right element is SLLNode
     - **```inline bool operator==(const T el)```**  - overloaded operator == when the right element is information as T type
 - **SLList class** - This class is the representation of the list itself. Functions of this data structure are: 
-    - **```bool isEmpty()```**
-    - **```void addToHead(T el)```**
-    - **```void addToTail(T el)```**
-    - **```void makeNewTail()```**
-    - **```void makeNewHead()```**
-    - **```T deleteFromHead()```**
-    - **```T deleteFromTail()```**
-    - **```void deleteEl(T el)```**
-    - **```SLLNode<T>* findNodePtr(T el)```**
-    - **```SLLNode<T>* getHead()```**
-    - **```SLLNode<T>* getTail()```**
-    - **```bool isTail(T el)```**
-    - **```int getNumOfEl()```**
-    - **```SLLNode<T>* getNext(SLLNode<T>* ptr)```**
-    - **```SLLNode<T>* getPrev(SLLNode<T>* ptr)```**
-    - **```T getHeadEl()```**
-    - **```T getTailEl()```**
-    - **```T getNextEl(T el)```**
-    - **```void printAll()```**
-    - **```bool isInList(T el)```**
-    - **```void swap(T a, T b)```**
-    - **```void swapNeigbhours(SLLNode<T>* ptr, SLLNode<T>* prev)```**
-    - **```void swap(SLLNode<T>* ptr1, SLLNode<T>* prev1, SLLNode<T>* ptr2, SLLNode<T>* prev2)```**
-    - **```void selectionSort()```**
-    - **```void invertionSort()```**
-    - **```void insertInSorted(SLLNode<T> *ptr)```**
-    - **```void insertInSorted(T el)```**
+    - **```bool isEmpty()```** - checks if the list is empty or not
+    - **```void addToHead(T el)```** - add one element to the head of the list
+    - **```void addToTail(T el)```** - add one element to the tail of the list
+    - **```void makeNewTail()```**  - makes new tail, usualy this is needed after sorting
+    - **```void makeNewHead()```** - makes new head, usualy this is needed in some situatins of deleting elements   
+    - **```T deleteFromHead()```** - function that delete one element from the head of the list
+    - **```T deleteFromTail()```** - function that delete one element from the tail of the list
+    - **```void deleteEl(T el)```** - function that delete one element if is in the list
+    - **```SLLNode<T>* findNodePtr(T el)```** - returns a pointer of node that have searched info
+    - **```SLLNode<T>* getHead()```** - returns a pointer of head node of the list
+    - **```SLLNode<T>* getTail()```** - returns a pointer of tail of the list
+    - **```bool isTail(T el)```** - checks is passed element is a tail element and return true or false
+    - **```int getNumOfEl()```** - returns a number of elements that is in the list
+    - **```SLLNode<T>* getNext(SLLNode<T>* ptr)```** - returns a pointer of next element in the list, depends on passed element
+    - **```SLLNode<T>* getPrev(SLLNode<T>* ptr)```** - returns a pointer of previous element in the list, depends on passed element
+    - **```T getHeadEl()```** - returns an information from head element
+    - **```T getTailEl()```** - returns an information from tail element 
+    - **```T getNextEl(T el)```** - returns an information of next element, depends on passed element
+    - **```void printAll()```** - function that prints all members of the list
+    - **```bool isInList(T el)```** - checks is element in the list or not and returns true or false
+    - **```void swap(T a, T b)```** - swap two elements of the list when only information of that elements are passed
+    - **```void swapNeigbhours(SLLNode<T>* ptr, SLLNode<T>* prev)```** - swap neigbhour elements in the list
+    - **```void swap(SLLNode<T>* ptr1, SLLNode<T>* prev1, SLLNode<T>* ptr2, SLLNode<T>* prev2)```** - swap to elements in the list when they pointer are known
+    - **```void selectionSort()```** - Function for sorting elements
+    - **```void invertionSort()```** - Function for sorting elements
+    - **```void insertInSorted(SLLNode<T> *ptr)```** - insert a new node into sorted list without destruct order after sort, when it's pointer is passed
+    - **```void insertInSorted(T el)```** - insert a new node into sorted list without destruct order after sort, when it's information is passed
 
 5. ## Hash Tables (Chainned and Scattered)
 
