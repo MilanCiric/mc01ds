@@ -17,7 +17,10 @@ This is not a final version of this header file, so it will be more in the time.
 
     For example, creation of stack that contains of 10 ObjType values will be:   **```stackAsArray<ObjType> name(10)```**
     
-2. ## Queue
+2. ## QueueAsArray
+
+
+
 3. ## Deck
 4. ## Single Linked lists
 5. ## Hash Tables (Chainned and Scattered)
