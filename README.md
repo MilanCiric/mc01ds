@@ -44,8 +44,12 @@ For example, creation of deck that consists of 10 ObjType values will be: **```D
 4. ## Single Linked lists
 
 Single linked lists are structures that is used also as auxilary structures, and they are very good solution, because if it's needed to be add new element into the list, it can be simply put on the right place without realocating memory for it. Just simply create node and put it into the list. The same is when it's needed to be delete some element from the list. Just relink the list and delete the node. So, this structure is consists of 2 classes:
-- SLLNode class
-- SLList class
+- **SLLNode class** - This class is only for representation of nodes in the list. It's functions are:
+    - **```T visit()```**
+    - **```friend ostream& operator<<(ostream& izlaz, SLLNode<T>& obj)```**
+    - **```inline bool operator==(const SLLNode& node)```**
+    - **```inline bool operator==(const T el)```**
+- **SLList class**
 
 5. ## Hash Tables (Chainned and Scattered)
 
