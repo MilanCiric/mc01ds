@@ -104,7 +104,8 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
     - **```virtual unsigned int f(char *s)```**
     - **```virtual unsigned int g(unsigned int i)```**
     - **```unsigned int getLength()```**
-    - **```virtual double getLoadFactor()```**
+    - **```virtual double getLoadFactor()```**1
+    
 This class is virtual so it can have na object reference, so it's only used for inheritance to the other hash type classes
 - **ChainedHashTable\<T,R\> class** - this class inherits HastTable class. Functions of this class are:
     - **```void insert(HashObj<T, R>* obj)```**
@@ -112,6 +113,7 @@ This class is virtual so it can have na object reference, so it's only used for 
     - **```void withdraw(T key)```**
     - **```HashObj<T, R>* find(T key)```**
     - **```void printAllRecords()```**
+    
 For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
 **```ChainedHashTable<ObjType, RecType> hash(100)```**
 - **ChainedScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
@@ -120,6 +122,7 @@ For example, creation of ChainedHashTable that consists of 100 ObjType elements 
     - **```ChainedScatterObject<T, R> find(T key)```**
     - **```void withdraw(T key)```**
     - **```void printAllRecords()```**
+    
 For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
 **```ChainedScatterTable<ObjType, RecType> hash(100)```**
 - **OpenScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
@@ -130,6 +133,7 @@ For example, creation of ChainedScatterTable that consists of 100 ObjType elemen
     - **```ScatterObj<T, R> find(T key)```**
     - **```void withdraw(T key)```**
     - **```void printAllRecords()```**
+    
 For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
 **```OpenScatterTable<ObjType, RecType> hash(100)```**
 
