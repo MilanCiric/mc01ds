@@ -10,19 +10,21 @@ Stack structure is based to be a auxilary structure for more complex data struct
 - **```long numberOfElements()```**   - returns number of elements that is in the stack
 - **```void push(T obj)```**          - put one object of T type onto the stack, and increase number of elements
 - **```T pop()```**                   - get one object of T type from the stack, and decrease number of elements
-- **```T getTop()```**                - get top object of T type from the stack
+- **```T getTop()```**                - get top object of T type from the stack, but don't remove it from the stack
 
-For example, creation of stack that contains of 10 ObjType values will be:   **```stackAsArray<ObjType> name(10)```**
+For example, creation of stack that consists of 10 ObjType values will be:   **```stackAsArray<ObjType> stack(10)```**
     
 2. ## QueueAsArray
 
 Queue is also auxilary structure for more complex structures where can be inserted object from one side of the queue, but can be taken only from other side, which means first in first out. Functions of this structure are:
-- **```long getSize()```**
-- **```long numberOfElements()```**
-- **```bool isEmpty()```**
-- **```T getHeadEl()```**
-- **```T dequeue()```**
-- **```bool enqueue(T obj)```**
+- **```long getSize()```**              - return size of the queue
+- **```long numberOfElements()```**     - return number of elements inserted into the queue
+- **```bool isEmpty()```**              - checks if the queue is empty or not
+- **```T getHeadEl()```**               - get head element from the queue but don't remove it from the queue
+- **```T dequeue()```**                 - get head element from the queue and remove it from the queue
+- **```bool enqueue(T obj)```**         - set new tail element into the queue
+
+For example, creation of queue that consists of 10 ObjType values will be: **```QueueAsArray<ObjType> que(10)```*
 
 3. ## Deck
 4. ## Single Linked lists
