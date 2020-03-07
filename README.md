@@ -86,89 +86,91 @@ List don't need initial value, beacue, list can exists even if it's empty, so si
 Hash tables are simply lookup table where we have pair of key|value. Simple idea is to make a table where can be inserted some objects (in basic solution), and in an advanced solution to be put more then we have location, making synonyms with the same key in single linked lists of records. Classes that solve this problem are:
 
 - **HashObj\<T,R\> class** - basic auxilary class for hash object where it's remembered key and value information. Functions of this class are:
-    - **```void deleteRecord()```**
-    - **```HashObj<T, R>& operator= (HashObj<T, R> const& obj)```**
-    - **```bool operator==(HashObj<T, R> const& obj)```**
-    - **```T getKey()```**
-    - **```void setKey(T key)```**
-    - **```R* getRecord()```**
-    - **```void setRecord(R* rec)```**
-    - **```bool isEqualKey(T key)```**
-    - **```friend ostream& operator<<(ostream& izlaz, HashObj<T, R>& obj)```**
+    - **```void deleteRecord()```** - Function that delete record from the hash table
+    - **```HashObj<T, R>& operator= (HashObj<T, R> const& obj)```** - overloaded operator = when on the right side are HashObj
+    - **```bool operator==(HashObj<T, R> const& obj)```** - overloaded operator == when on the right side ade HashObj
+    - **```T getKey()```** - returns key value of a Hash object
+    - **```void setKey(T key)```** - set key value of a Hash object
+    - **```R* getRecord()```** - returns record from a Hash object
+    - **```void setRecord(R* rec)```** - set record value of a Hash object
+    - **```bool isEqualKey(T key)```** - checks is the key are the same, key of the object and passed key
+    - **```friend ostream& operator<<(ostream& izlaz, HashObj<T, R>& obj)```** - frined function for operator <<, it means that prints infomration to the output 
 - **ScatterObj\<T,R\> class** - this class inherits HashObj class and this class only add status where 0 is free, 1 deleted and 2 occupied location in the hash table. This class only have constructors, and no new functions.
 - **ChainedScatterObject\<T,R\> class** - this class inherits ScatterObj class and add next element where it's puts information about next element as synonym.  This class only have constructors, and no new functions.
 - **HashTable\<T,R\> class** - Basic structure for Hash table. Function of this data structure are:
-    - **```unsigned int h(HashObj<T, R>* obj)```**
-    - **```virtual unsigned int f(int i)```**
-    - **```virtual unsigned int f(double d)```**
-    - **```virtual unsigned int f(char *s)```**
-    - **```virtual unsigned int g(unsigned int i)```**
-    - **```unsigned int getLength()```**
-    - **```virtual double getLoadFactor()```**1
+    - **```unsigned int h(HashObj<T, R>* obj)```** - hash function, that returns location in hash table as key value
+    - **```virtual unsigned int f(int i)```** - primary transformation function if passed integer value
+    - **```virtual unsigned int f(double d)```** - primary transformation function if passed double value
+    - **```virtual unsigned int f(char *s)```** - primary transformation function if passed array of chars
+    - **```virtual unsigned int g(unsigned int i)```** - secondary transformation function
+    - **```unsigned int getLength()```** - Function that returns size of the hash table
+    - **```virtual double getLoadFactor()```** - Function that returns load factor in percentage value
     
     This class is virtual so it can't have na object reference, so it's only used for inheritance to the other hash type classes
 - **ChainedHashTable\<T,R\> class** - this class inherits HastTable class. Functions of this class are:
-    - **```void insert(HashObj<T, R>* obj)```**
-    - **```void withdraw(HashObj<T, R>* obj)```**
-    - **```void withdraw(T key)```**
-    - **```HashObj<T, R>* find(T key)```**
-    - **```void printAllRecords()```**
+    - **```void insert(HashObj<T, R>* obj)```** - Function for inserting element into Chained Hash table
+    - **```void withdraw(HashObj<T, R>* obj)```** - Function for withdrawing an object from Chained Hash table when object is known
+    - **```void withdraw(T key)```** - Function for withdrawsing an object from Chained Hash table when key is known
+    - **```HashObj<T, R>* find(T key)```** - returns pointer of hash object if is in the Chained Hash table
+    - **```void printAllRecords()```** - prints all records that are in the Chained Hash table
     
     For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
 **```ChainedHashTable<ObjType, RecType> hash(100)```**
 - **ChainedScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
-    - **```unsigned int h(ChainedScatterObject<T, R> obj)```**
-    - **```void insert(ChainedScatterObject<T, R> obj)```**
-    - **```ChainedScatterObject<T, R> find(T key)```**
-    - **```void withdraw(T key)```**
-    - **```void printAllRecords()```**
+    - **```unsigned int h(ChainedScatterObject<T, R> obj)```** - overloaded hash function for ChainedScatterObject  
+    - **```void insert(ChainedScatterObject<T, R> obj)```** - function for inserting element into Chained Scatter Table
+    - **```ChainedScatterObject<T, R> find(T key)```** - Function that finds Hash object if exists in Chained Scatter Table
+    - **```void withdraw(T key)```** - Function for withdrawing hash object if key is known
+    - **```void printAllRecords()```** - prints all records in the Chained Scatter Table
     
     For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
 **```ChainedScatterTable<ObjType, RecType> hash(100)```**
 - **OpenScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
-    - **```unsigned int h(ScatterObj<T, R> obj)```**
-    - **```unsigned int findUnoccupied(ScatterObj<T, R> obj```**
-    - **```long findMatch(T key)```**
-    - **```void insert(ScatterObj<T, R> obj)```**
-    - **```ScatterObj<T, R> find(T key)```**
-    - **```void withdraw(T key)```**
-    - **```void printAllRecords()```**
+    - **```unsigned int h(ScatterObj<T, R> obj)```** - overloaded hash function for ScatterObj
+    - **```unsigned int findUnoccupied(ScatterObj<T, R> obj```** - Function that finds unoccupied loacion in the Open Scatter Table
+    - **```long findMatch(T key)```** - Function that find exact match if exists in Open Scatter Table based on key value
+    - **```void insert(ScatterObj<T, R> obj)```** - Function for inserting element into Open Scatter Table
+    - **```ScatterObj<T, R> find(T key)```** - Function for finding Hash object in Open Scatter Table based on the key value
+    - **```void withdraw(T key)```** - Function for withdrawing the hash object from Open Scatter Table
+    - **```void printAllRecords()```** - prints all records of Open Scatter Table
     
     For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
 **```OpenScatterTable<ObjType, RecType> hash(100)```**
 
 6. ## Binary Search Tree
 
-- **BSTNode\<T\> class** - This class is only an euxilary one for later creation of Binary search tree structure. Functions of this class are:
-    - **```bool isLT(T el)```**
-    - **```bool isGT(T el)```**
-    - **```bool isEQ(T el)```**
-    - **```void setKey(T key)```**
-    - **```T getKey()```**
-    - **```void visit()```**
-- **BSTree\<T\> class**
-    - **```void deleteTree(BSTNode<T>* p)```**
-    - **```void deleteAll()```**
-    - **```bool isEmpty()```**
-    - **```void insert(T el)```**
-    - **```bool isInTree(T el)```**
-    - **```BSTNode<T>* search(T el)```**
-    - **```BSTNode<T>* search(BSTNode<T>* p, T el)```**
-    - **```void balance(int data[], int first, int last)```**
-    - **```void deleteByCopying(T el)```**
-    - **```void deleteByMergind(T el)```**
-    - **```void preorder()```**
-    - **```void inorder()```**
-    - **```void postorder()```**
-    - **```void inorder(BSTNode<T>* p)```**
-    - **```void preorder(BSTNode<T>* p)```**
-    - **```void postorder(BSTNode<T>* p)```**
-    - **```void breadthFirst()```**
-    - **```void iterativePreorder()```**
-    - **```void iterativeInorder()```**
-    - **```void iterativePostorder()```**
-    - **```void printNode(T el)```**
-    - **```void printNode(BSTNode<T>* p)```**
+Binary search trees are very usefull and complex data structures. They usualy can be used for searching, but this is not only use of this data structures. It can be weighted, also grouped, and so on, depends on what is needed. Two classes that make this data structures are:
+
+- **BSTNode\<T\> class** - This class is only an euxilary one for later creation of Binary search tree structure. Here it's remembered only key value, and also left and righ descendant of the node. Functions of this class are:
+    - **```bool isLT(T el)```** - Checks if the el value is lover then key value
+    - **```bool isGT(T el)```** - Checks if the el value is greater then key value
+    - **```bool isEQ(T el)```** - Checks if the el value is equal to the key value
+    - **```void setKey(T key)```** - Function that set key value to the passed value
+    - **```T getKey()```** - Function that returns key value of the node
+    - **```void visit()```** - Function that print information of the node
+- **BSTree\<T\> class** - This class is representation of the Binary search tree itself, where the auxilary structure is BSTNode as basic element. Functions of this class are:
+    - **```void deleteTree(BSTNode<T>* p)```** - Function that deletes subtree from node p
+    - **```void deleteAll()```** - Function that deltes complete tree, starts from root node
+    - **```bool isEmpty()```** - Function that checks is the tree is empty or not
+    - **```void insert(T el)```** - Function for inserting element into the Binary Search Tree
+    - **```bool isInTree(T el)```** - Function that checks is the passed element with the key value in the tree or not
+    - **```BSTNode<T>* search(T el)```** - Function that find a node based on passed key value if exists in the Binary Search Tree
+    - **```BSTNode<T>* search(BSTNode<T>* p, T el)```** - Function that find a node based on pointer value of the node if exists in the Binary Search Tree 
+    - **```void balance(int data[], int first, int last)```** - Make from sorted array a sorted Binary Search Tree
+    - **```void deleteByCopying(T el)```** - Delete a node with copying a subtree
+    - **```void deleteByMergind(T el)```** - Delete a node with merging subtree
+    - **```void preorder()```** - Function for preorder traversal of Binary Search Tree, recursive way
+    - **```void inorder()```** - Function for inorder traversal of Binary Search Tree, recursive way
+    - **```void postorder()```** - Function for postorder traversal of Binary Search Tree, recursive way
+    - **```void inorder(BSTNode<T>* p)```**  - Function for inorder traversal of Binary Search Tree, recursive way
+    - **```void preorder(BSTNode<T>* p)```** - Function for preorder traversal of Binary Search Tree, recursive way
+    - **```void postorder(BSTNode<T>* p)```** - Function for postorder traversal of Binary Search Tree, recursive way
+    - **```void breadthFirst()```** - Function for Bradth first traversal of Binary Search Tree
+    - **```void iterativePreorder()```** - Function for iterative preorder traversal of Binary Search Tree
+    - **```void iterativeInorder()```** - Function for iterative inorder traversal of Binary Search Tree
+    - **```void iterativePostorder()```** - Function for iterative postorder traversal of Binary Search Tree
+    - **```void printNode(T el)```** - Function that print node with it's left and right descendant, based on passed key
+    - **```void printNode(BSTNode<T>* p)```** - Function that print node with it's left and right descendant, based on passed pointer of the node
 
 For example, creation of Binary search tree that consist of ObjType elements will be: **```BSTree<ObjType> tree```** Situation is the same as in single liked lists, only here every element have two pointers: left and right element, logic are the same.
 
