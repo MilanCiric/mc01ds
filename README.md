@@ -20,4 +20,4 @@ then recursion call methods. Function of this structures are:
 - T pop()                   - get one object of T type from the stack, and decrease number of elements
 - T getTop()                - get top object of T type from the stack
 
-For example, creation of stack that contains of 10 double values will be:   //stackAsArray <double> name(10)//
+For example, creation of stack that contains of 10 ObjTypes values will be:   stackAsArray\<ObjTypes\> name(10)
