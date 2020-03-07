@@ -39,11 +39,20 @@ Deck structure is similar to the queue structure but in this version it can be p
 - **```T getTailEl()```** - get tail element, but don't remove it from the deck
 - **```T dequeueTail()```** - get tail element and remove it from the deck
 
-For example, creation of deck that consists of 10 ObjType values will be: **```DeckAsArray<ObjType> d(10);```**
+For example, creation of deck that consists of 10 ObjType values will be: **```DeckAsArray<ObjType> deck(10);```**
 
 4. ## Single Linked lists
+
+Single linked lists are structures that is used also as auxilary structures, and they are very good solution, because if it's needed to be add new element into the list, it can be simply put on the right place without realocating memory for it. Just simply create node and put it into the list. The same is when it's needed to be delete some element from the list. Just relink the list and delete the node. So, this structure is consists of 2 classes:
+- SLLNode class
+- SLList class
+
 5. ## Hash Tables (Chainned and Scattered)
+
+
 6. ## Binary Search Tree
+
+
 7. ## Graph
 
 For more information about how to use these structures look at the cpp file that is test file of these structures.
