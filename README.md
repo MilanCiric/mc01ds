@@ -105,23 +105,23 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
     - **```virtual unsigned int g(unsigned int i)```**
     - **```unsigned int getLength()```**
     - **```virtual double getLoadFactor()```**
-    This class is virtual so it can have na object reference, so it's only used for inheritance to the other hash type classes
+This class is virtual so it can have na object reference, so it's only used for inheritance to the other hash type classes
 - **ChainedHashTable\<T,R\> class** - this class inherits HastTable class. Functions of this class are:
     - **```void insert(HashObj<T, R>* obj)```**
     - **```void withdraw(HashObj<T, R>* obj)```**
     - **```void withdraw(T key)```**
     - **```HashObj<T, R>* find(T key)```**
     - **```void printAllRecords()```**
-    For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
-    **```ChainedHashTable<ObjType, RecType> hash(100)```**
+For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
+**```ChainedHashTable<ObjType, RecType> hash(100)```**
 - **ChainedScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
     - **```unsigned int h(ChainedScatterObject<T, R> obj)```**
     - **```void insert(ChainedScatterObject<T, R> obj)```**
     - **```ChainedScatterObject<T, R> find(T key)```**
     - **```void withdraw(T key)```**
     - **```void printAllRecords()```**
-     For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
-     **```ChainedScatterTable<ObjType, RecType> hash(100)```**
+For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
+**```ChainedScatterTable<ObjType, RecType> hash(100)```**
 - **OpenScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
     - **```unsigned int h(ScatterObj<T, R> obj)```**
     - **```unsigned int findUnoccupied(ScatterObj<T, R> obj```**
@@ -130,8 +130,8 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
     - **```ScatterObj<T, R> find(T key)```**
     - **```void withdraw(T key)```**
     - **```void printAllRecords()```**
-    For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
-    **```OpenScatterTable<ObjType, RecType> hash(100)```**
+For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
+**```OpenScatterTable<ObjType, RecType> hash(100)```**
 
 6. ## Binary Search Tree
 
