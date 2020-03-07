@@ -50,33 +50,33 @@ Single linked lists are structures that is used also as auxilary structures, and
     - **```inline bool operator==(const SLLNode& node)```** - overloaded operator == when the right element is SLLNode
     - **```inline bool operator==(const T el)```**  - overloaded operator == when the right element is information as T type
 - **SLList class** - This class is the representation of the list itself. Functions of this data structure are: 
-    -**```bool isEmpty()```**
-    -**```void addToHead(T el)```**
-    -**```void addToTail(T el)```**
-    -**```void makeNewTail()```**
-    -**```void makeNewHead()```**
-    -**```T deleteFromHead()```**
-    -**```T deleteFromTail()```**
-    -**```void deleteEl(T el)```**
-    -**```SLLNode<T>* findNodePtr(T el)```**
-    -**```SLLNode<T>* getHead()```**
-    -**```SLLNode<T>* getTail()```**
-    -**```bool isTail(T el)```**
-    -**```int getNumOfEl()```**
-    -**```SLLNode<T>* getNext(SLLNode<T>* ptr)```**
-    -**```SLLNode<T>* getPrev(SLLNode<T>* ptr)```**
-    -**```T getHeadEl()```**
-    -**```T getTailEl()```**
-    -**```T getNextEl(T el)```**
-    -**```void printAll()```**
-    -**```bool isInList(T el)```**
-    -**```void swap(T a, T b)```**
-    -**```void swapNeigbhours(SLLNode<T>* ptr, SLLNode<T>* prev)```**
-    -**```void swap(SLLNode<T>* ptr1, SLLNode<T>* prev1, SLLNode<T>* ptr2, SLLNode<T>* prev2)```**
-    -**```void selectionSort()```**
-    -**```void invertionSort()```**
-    -**```void insertInSorted(SLLNode<T> *ptr)```**
-    -**```void insertInSorted(T el)```**
+    - **```bool isEmpty()```**
+    - **```void addToHead(T el)```**
+    - **```void addToTail(T el)```**
+    - **```void makeNewTail()```**
+    - **```void makeNewHead()```**
+    - **```T deleteFromHead()```**
+    - **```T deleteFromTail()```**
+    - **```void deleteEl(T el)```**
+    - **```SLLNode<T>* findNodePtr(T el)```**
+    - **```SLLNode<T>* getHead()```**
+    - **```SLLNode<T>* getTail()```**
+    - **```bool isTail(T el)```**
+    - **```int getNumOfEl()```**
+    - **```SLLNode<T>* getNext(SLLNode<T>* ptr)```**
+    - **```SLLNode<T>* getPrev(SLLNode<T>* ptr)```**
+    - **```T getHeadEl()```**
+    - **```T getTailEl()```**
+    - **```T getNextEl(T el)```**
+    - **```void printAll()```**
+    - **```bool isInList(T el)```**
+    - **```void swap(T a, T b)```**
+    - **```void swapNeigbhours(SLLNode<T>* ptr, SLLNode<T>* prev)```**
+    - **```void swap(SLLNode<T>* ptr1, SLLNode<T>* prev1, SLLNode<T>* ptr2, SLLNode<T>* prev2)```**
+    - **```void selectionSort()```**
+    - **```void invertionSort()```**
+    - **```void insertInSorted(SLLNode<T> *ptr)```**
+    - **```void insertInSorted(T el)```**
 
 5. ## Hash Tables (Chainned and Scattered)
 
