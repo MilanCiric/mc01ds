@@ -27,6 +27,20 @@ Queue is also auxilary structure for more complex structures where can be insert
 For example, creation of queue that consists of 10 ObjType values will be: **```QueueAsArray<ObjType> que(10)```**
 
 3. ## Deck
+
+Deck structure is similar to the queue structure but in this version it can be put element from head and from tail, also it can be taken from both sides as well. This is like two side way queue. Functions of this structure are:
+- **```long getSize()```** - return size of the deck
+- **```long numberOfElements()```** - return number of inserted elements into the deck
+- **```bool isEmpty()```** - checks is the deck is empty or not
+- **```T getHeadEl()```** - get head element, but don't remove it from the deck
+- **```T dequeue()```** - get head element and remove it from the deck
+- **```bool enqueue(T obj)```** - insert new tail element into the deck
+- **```bool enqueueHead(T obj)```** - insert new head element into the deck
+- **```T getTailEl()```** - get tail element, but don't remove it from the deck
+- **```T dequeueTail()```** - get tail element and remove it from the deck
+
+For example, creation of deck that consists of 10 ObjType values will be: **```DeckAsArray<ObjType> d(10);```**
+
 4. ## Single Linked lists
 5. ## Hash Tables (Chainned and Scattered)
 6. ## Binary Search Tree
