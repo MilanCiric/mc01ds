@@ -1,6 +1,6 @@
 # mc01ds
 
-mc01ds is a short of Milan Ciric v01 Data Structures. In this header file you can find some solutions for data structures in c++. This is not a final version of this header file, so it will be more in the time. In this version it can be found structures of:
+mc01ds is a short of Milan Ciric v01 Data Structures. In this header file you can find some solutions for data structures in c++. This is not a final version of this header file, so it will be more in the time. This is LIFO structure, which means, last in first out structure. In this version it can be found structures of:
 
 1. ## stackAsArray
 
@@ -16,7 +16,13 @@ For example, creation of stack that contains of 10 ObjType values will be:   **`
     
 2. ## QueueAsArray
 
-Queue is also auxilary structure for more complex structures where can be inserted object from one side of the queue, but can be taken only from other side, which means first in first out.
+Queue is also auxilary structure for more complex structures where can be inserted object from one side of the queue, but can be taken only from other side, which means first in first out. Functions of this structure are:
+- **```long getSize()```**
+- **```long numberOfElements()```**
+- **```bool isEmpty()```**
+- **```T getHeadEl()```**
+- **```T dequeue()```**
+- **```bool enqueue(T obj)```**
 
 3. ## Deck
 4. ## Single Linked lists
