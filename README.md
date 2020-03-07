@@ -45,11 +45,38 @@ For example, creation of deck that consists of 10 ObjType values will be: **```D
 
 Single linked lists are structures that is used also as auxilary structures, and they are very good solution, because if it's needed to be add new element into the list, it can be simply put on the right place without realocating memory for it. Just simply create node and put it into the list. The same is when it's needed to be delete some element from the list. Just relink the list and delete the node. So, this structure is consists of 2 classes:
 - **SLLNode class** - This class is only for representation of nodes in the list. It's functions are:
-    - **```T visit()```**
-    - **```friend ostream& operator<<(ostream& izlaz, SLLNode<T>& obj)```**
-    - **```inline bool operator==(const SLLNode& node)```**
-    - **```inline bool operator==(const T el)```**
+    - **```T visit()```** - Function that print node information
+    - **```friend ostream& operator<<(ostream& izlaz, SLLNode<T>& obj)```** - overloaded operator <<
+    - **```inline bool operator==(const SLLNode& node)```** - overloaded operator == when the right element is SLLNode
+    - **```inline bool operator==(const T el)```**  - overloaded operator == when the right element is information as T type
 - **SLList class**
+    -**```bool isEmpty()```**
+    -**```void addToHead(T el)```**
+    -**```void addToTail(T el)```**
+    -**```void makeNewTail()```**
+    -**```void makeNewHead()```**
+    -**```T deleteFromHead()```**
+    -**```T deleteFromTail()```**
+    -**```void deleteEl(T el)```**
+    -**```SLLNode<T>* findNodePtr(T el)```**
+    -**```SLLNode<T>* getHead()```**
+    -**```SLLNode<T>* getTail()```**
+    -**```bool isTail(T el)```**
+    -**```int getNumOfEl()```**
+    -**```SLLNode<T>* getNext(SLLNode<T>* ptr)```**
+    -**```SLLNode<T>* getPrev(SLLNode<T>* ptr)```**
+    -**```T getHeadEl()```**
+    -**```T getTailEl()```**
+    -**```T getNextEl(T el)```**
+    -**```void printAll()```**
+    -**```bool isInList(T el)```**
+    -**```void swap(T a, T b)```**
+    -**```void swapNeigbhours(SLLNode<T>* ptr, SLLNode<T>* prev)```**
+    -**```void swap(SLLNode<T>* ptr1, SLLNode<T>* prev1, SLLNode<T>* ptr2, SLLNode<T>* prev2)```**
+    -**```void selectionSort()```**
+    -**```void invertionSort()```**
+    -**```void insertInSorted(SLLNode<T> *ptr)```**
+    -**```void insertInSorted(T el)```**
 
 5. ## Hash Tables (Chainned and Scattered)
 
