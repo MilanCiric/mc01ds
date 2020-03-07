@@ -98,13 +98,40 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
 - **ScatterObj\<T,R\> class** - this class inherits HashObj class and this class only add status where 0 is free, 1 deleted and 2 occupied location in the hash table. This class only have constructors, and no new functions.
 - **ChainedScatterObject\<T,R\> class** - this class inherits ScatterObj class and add next element where it's puts information about next element as synonym.  This class only have constructors, and no new functions.
 - **HashTable\<T,R\> class** - Basic structure for Hash table. Function of this data structure are:
-    - **``````**
+    - **```unsigned int h(HashObj<T, R>* obj)```**
+    - **```virtual unsigned int f(int i)```**
+    - **```virtual unsigned int f(double d)```**
+    - **```virtual unsigned int f(char *s)```**
+    - **```virtual unsigned int g(unsigned int i)```**
+    - **```unsigned int getLength()```**
+    - **```virtual double getLoadFactor()```**
+    This class is virtual so it can have na object reference, so it's only used for inheritance to the other hash type classes
 - **ChainedHashTable\<T,R\> class** - this class inherits HastTable class. Functions of this class are:
-    - **``````**
+    - **```void insert(HashObj<T, R>* obj)```**
+    - **```void withdraw(HashObj<T, R>* obj)```**
+    - **```void withdraw(T key)```**
+    - **```HashObj<T, R>* find(T key)```**
+    - **```void printAllRecords()```**
+    For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
+    **```ChainedHashTable<ObjType, RecType> hash(100)```**
 - **ChainedScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
-    - **``````**
+    - **```unsigned int h(ChainedScatterObject<T, R> obj)```**
+    - **```void insert(ChainedScatterObject<T, R> obj)```**
+    - **```ChainedScatterObject<T, R> find(T key)```**
+    - **```void withdraw(T key)```**
+    - **```void printAllRecords()```**
+     For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
+     **```ChainedScatterTable<ObjType, RecType> hash(100)```**
 - **OpenScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
-    - **``````**
+    - **```unsigned int h(ScatterObj<T, R> obj)```**
+    - **```unsigned int findUnoccupied(ScatterObj<T, R> obj```**
+    - **```long findMatch(T key)```**
+    - **```void insert(ScatterObj<T, R> obj)```**
+    - **```ScatterObj<T, R> find(T key)```**
+    - **```void withdraw(T key)```**
+    - **```void printAllRecords()```**
+    For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
+    **```OpenScatterTable<ObjType, RecType> hash(100)```**
 
 6. ## Binary Search Tree
 
