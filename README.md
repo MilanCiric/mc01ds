@@ -83,6 +83,8 @@ List don't need initial value, beacue, list can exists even if it's empty, so si
 
 5. ## Hash Tables (Chainned, Scattered, OpenScattered)
 
+In computing, a hash table (hash map) is a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found.
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash collisions where the hash function generates the same index for more than one key. Such collisions are always accommodated in some way.
 Hash tables are simply lookup table where we have pair of key|value. Simple idea is to make a table where can be inserted some objects (in basic solution), and in an advanced solution to be put more then we have location, making synonyms with the same key in single linked lists of records. Classes that solve this problem are:
 
 - **HashObj\<T,R\> class** - basic auxilary class for hash object where it's remembered key and value information. Functions of this class are:
@@ -139,6 +141,7 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
 
 6. ## Binary Search Tree
 
+In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container: a data structure that stores "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name).
 Binary search trees are very usefull and complex data structures. They usualy can be used for searching, but this is not only use of this data structures. It can be weighted, also grouped, and so on, depends on what is needed. Two classes that make this data structures are:
 
 - **BSTNode\<T\> class** - This class is only an euxilary one for later creation of Binary search tree structure. Here it's remembered only key value, and also left and righ descendant of the node. Functions of this class are:
@@ -176,26 +179,29 @@ For example, creation of Binary search tree that consist of ObjType elements wil
 
 7. ## Graph
 
-- **LinkedNode\<T,W\> class**
-    - **```void Visit()```**
-- **Edge\<T,W\> class**
-- **GraphAsLists\<T,W\> class**
-    - **```bool insertNode(t pod)```**
-    - **```bool deleteNode(t pod)```**
-    - **```bool insertEdge(t a, t b)```**
-    - **```bool deleteEdge(t a, t b)```**
-    - **```void deleteEdgeToNode(LinkedNode<t, w>* ptr)```**
-    - **```LinkedNode<t, w>* findNode(t pod)```**
-    - **```Edge<t, w>* findEdge(t a, t b)```**
-    - **```LinkedNode<t, w>* maxExitingLevel()```**
-    - **```LinkedNode<t, w>* maxInputLevel()```**
-    - **```void nullEdgeNodes()```**
-    - **```void printGraph()```**
-    - **```long breadthTrav(t a)```**
-    - **```long depthTrav(t a)```**
-    - **```long topologicalOrderTrav()```**
-    - **```long findPathBreadth(t first, t last, t* arPath, int* lPath)```**
-    - **```long findPathBreadth(LinkedNode<t, w>* ptr, LinkedNode<t, w>* pEnd, t* arPath, int* lPath)```**
+In mathematics, and more specifically in graph theory, a graph is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related". The objects correspond to mathematical abstractions called vertices (also called nodes or points) and each of the related pairs of vertices is called an edge (also called link or line).Typically, a graph is depicted in diagrammatic form as a set of dots or circles for the vertices, joined by lines or curves for the edges. Graphs are one of the objects of study in discrete mathematics. Because of these reasons, it's needed to have a graph as data structure for better solving some of these problems.
+Classes that are make our graph are:
+
+- **LinkedNode\<T,W\> class** - This class is representation of a node in the graph, and it stores all needed data, and have one function more then constructore and that function is:
+    - **```void Visit()```** - Function that print information about node
+- **Edge\<T,W\> class** - This class is representation of an edge in the graph. It stores all needed data and dont have any additional functions.
+- **GraphAsLists\<T,W\> class** - This class is the graph itself. It consists of Linked nodes as primary elements and from edges that linkes two node per edge. Funciton of this class are:
+    - **```bool insertNode(t pod)```** - Function that insert one node into the graph
+    - **```bool deleteNode(t pod)```** - funtion that delete one node from the graph if exists
+    - **```bool insertEdge(t a, t b)```** - Function that insert one edge into the graph if is possible 
+    - **```bool deleteEdge(t a, t b)```** - Function that delete the edge from the graph if exists
+    - **```void deleteEdgeToNode(LinkedNode<t, w>* ptr)```** - Function that delete every edge that lead to the some node. This is important function when we delete the node, also all his corelated edges must be deleted as well.
+    - **```LinkedNode<t, w>* findNode(t pod)```** - Function that find node and return it's pointer, if exists in the graph
+    - **```Edge<t, w>* findEdge(t a, t b)```** - Function that find an edge and return it's pointer, if exists in the graph
+    - **```LinkedNode<t, w>* maxExitingLevel()```** - Function that's calculating maximum edge number that exits from one node
+    - **```LinkedNode<t, w>* maxInputLevel()```** - Function that's calculating maximum edge number that get in one node 
+    - **```void nullEdgeNodes()```** - Function that prints all nodes that dont have any edges
+    - **```void printGraph()```** - Function that print complete graph
+    - **```long breadthTrav(t a)```** - Function for Breadth taversing of the graph
+    - **```long depthTrav(t a)```** - Function for Depth traversing of the graph
+    - **```long topologicalOrderTrav()```** - Function for traversing of the graph based on topological order
+    - **```long findPathBreadth(t first, t last, t* arPath, int* lPath)```** - Function that finds the path, based on info values of nodes
+    - **```long findPathBreadth(LinkedNode<t, w>* ptr, LinkedNode<t, w>* pEnd, t* arPath, int* lPath)```** - Function that finds the path, based on pointer values of nodes
     
 
 For example, creation of Graph that consists of ObjType elements with WeightType will be: **```GraphAsLists<ObjType, WeightType> graf```**. Also graph use single linked list as auxilary structure so we dont need initial size.
