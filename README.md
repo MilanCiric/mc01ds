@@ -78,15 +78,33 @@ Single linked lists are structures that is used also as auxilary structures, and
     - **```void insertInSorted(SLLNode<T> *ptr)```** - insert a new node into sorted list without destruct order after sort, when it's pointer is passed
     - **```void insertInSorted(T el)```** - insert a new node into sorted list without destruct order after sort, when it's information is passed
 
-For example, creation of single linked list of ObjType elements will be: **```SLList<ObjType> list```**
-List don't need initial value, beacue, list can exists even if it empty, so simpy adding one element into the list we get the list, and so on.
+For example, creation of single linked list consists of ObjType elements will be: **```SLList<ObjType> list```**
+List don't need initial value, beacue, list can exists even if it's empty, so simpy adding one element into the list we get the list, and so on.
 
 5. ## Hash Tables (Chainned and Scattered)
 
+- **HashObj class**
+- **ScatterObj class**
+- **ChainedScatterObject class**
+- **HashTable class**
+- **ChainedHashTable class**
+- **ChainedScatterTable**
+- **OpenScatterTable**
 
 6. ## Binary Search Tree
 
+- **BSTNode class**
+- **BSTree class**
+
+For example, creation of Binary search tree that consist of ObjType elements will be: **```BSTree<ObjType> tree```** Situation is the same as in single liked lists, only here every element have two pointers: left and right element, logic are the same.
 
 7. ## Graph
+
+- **LinkedNode class**
+- **Edge class**
+- **LinkedNode class**
+- **GraphAsLists class**
+
+For example, creation of Graph that consists of ObjType elements with WeightType will be: **```GraphAsLists<ObjType, WeightType> graf```**. Also graph use single linked list as auxilary structure so we dont need initial size.
 
 For more information about how to use these structures look at the cpp file that is test file of these structures.
