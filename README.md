@@ -86,17 +86,25 @@ List don't need initial value, beacue, list can exists even if it's empty, so si
 Hash tables are simply lookup table where we have pair of key|value. Simple idea is to make a table where can be inserted some objects (in basic solution), and in an advanced solution to be put more then we have location, making synonyms with the same key in single linked lists of records. Classes that solve this problem are:
 
 - **HashObj class** - basic auxilary class for hash object where it's remembered key and value information. Functions of this class are:
-    - **``````**
+    - **```void deleteRecord()```**
+    - **```HashObj<T, R>& operator= (HashObj<T, R> const& obj)```**
+    - **```bool operator==(HashObj<T, R> const& obj)```**
+    - **```T getKey()```**
+    - **```void setKey(T key)```**
+    - **```R* getRecord()```**
+    - **```void setRecord(R* rec)```**
+    - **```bool isEqualKey(T key)```**
+    - **```friend ostream& operator<<(ostream& izlaz, HashObj<T, R>& obj)```**
 - **ScatterObj class** - this class inherits HashObj class and this class only add status where 0 is free, 1 deleted and 2 occupied location in the hash table. This class only have constructors, and no new functions.
 - **ChainedScatterObject class** - this class inherits ScatterObj class and add next element where it's puts information about next element as synonym.  This class only have constructors, and no new functions.
 - **HashTable class** - Basic structure for Hash table. Function of this data structure are:
     - **``````**
 - **ChainedHashTable class** - this class inherits HastTable class. Functions of this class are:
-    -
+    - **``````**
 - **ChainedScatterTable** - this class inherits HashTable class. Functions of this class are:
-    -**``````**
+    - **``````**
 - **OpenScatterTable** - this class inherits HashTable class. Functions of this class are:
-    -**``````**
+    - **``````**
 
 6. ## Binary Search Tree
 
