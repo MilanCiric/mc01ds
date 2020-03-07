@@ -10,7 +10,7 @@ This is not a final version of this header file, so it will be more in the time.
 6. Binary Search Tree
 7. Graph
 
-Stack structure is based to be a auxilary structure for more complex data structures. If you want to awoid recursion, you will
+1. Stack structure is based to be a auxilary structure for more complex data structures. If you want to awoid recursion, you will
 use stack structure as auxilary structure, but that solution is far more complex to develop but it's faster and takes less memory
 then recursion call methods. Function of this structures are:
 
@@ -20,4 +20,4 @@ then recursion call methods. Function of this structures are:
 - T pop()                   - get one object of T type from the stack, and decrease number of elements
 - T getTop()                - get top object of T type from the stack
 
-For example, creation of stack that contains of 10 ObjTypes values will be:   stackAsArray\<ObjTypes\> name(10)
+For example, creation of stack that contains of 10 ObjType values will be:   stackAsArray\<ObjType\> name(10)
