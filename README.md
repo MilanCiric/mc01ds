@@ -14,7 +14,7 @@ Stack structure is based to be a auxilary structure for more complex data struct
 
 For example, creation of stack that consists of 10 ObjType values will be:   **```stackAsArray<ObjType> stack(10)```**
     
-2. ## QueueAsArray
+2. ## QueueAsArray\<T\>
 
 Queue is also auxilary structure for more complex structures where can be inserted object from one side of the queue, but can be taken only from other side, which means first in first out. Functions of this structure are:
 - **```long getSize()```**              - return size of the queue
@@ -26,7 +26,7 @@ Queue is also auxilary structure for more complex structures where can be insert
 
 For example, creation of queue that consists of 10 ObjType values will be: **```QueueAsArray<ObjType> que(10)```**
 
-3. ## Deck
+3. ## DeckAsArray\<T\>
 
 Deck structure is similar to the queue structure but in this version it can be put element from head and from tail, also it can be taken from both sides as well. This is like two side way queue. Functions of this structure are:
 - **```long getSize()```** - return size of the deck
@@ -44,12 +44,12 @@ For example, creation of deck that consists of 10 ObjType values will be: **```D
 4. ## Single Linked lists
 
 Single linked lists are structures that is used also as auxilary structures, and they are very good solution, because if it's needed to be add new element into the list, it can be simply put on the right place without realocating memory for it. Just simply create node and put it into the list. The same is when it's needed to be delete some element from the list. Just relink the list and delete the node. So, this structure is consists of 2 classes:
-- **SLLNode class** - This class is only for representation of nodes in the list. This class is only auxilary class so the SLList class can be made. It's functions are:
+- **SLLNode\<T\> class** - This class is only for representation of nodes in the list. This class is only auxilary class so the SLList class can be made. It's functions are:
     - **```T visit()```** - Function that print node information
     - **```friend ostream& operator<<(ostream& izlaz, SLLNode<T>& obj)```** - overloaded operator <<
     - **```inline bool operator==(const SLLNode& node)```** - overloaded operator == when the right element is SLLNode
     - **```inline bool operator==(const T el)```**  - overloaded operator == when the right element is information as T type
-- **SLList class** - This class is the representation of the list itself. Functions of this data structure are: 
+- **SLList\<T\> class** - This class is the representation of the list itself. Functions of this data structure are: 
     - **```bool isEmpty()```** - checks if the list is empty or not
     - **```void addToHead(T el)```** - add one element to the head of the list
     - **```void addToTail(T el)```** - add one element to the tail of the list
@@ -85,7 +85,7 @@ List don't need initial value, beacue, list can exists even if it's empty, so si
 
 Hash tables are simply lookup table where we have pair of key|value. Simple idea is to make a table where can be inserted some objects (in basic solution), and in an advanced solution to be put more then we have location, making synonyms with the same key in single linked lists of records. Classes that solve this problem are:
 
-- **HashObj class** - basic auxilary class for hash object where it's remembered key and value information. Functions of this class are:
+- **HashObj\<T,R\> class** - basic auxilary class for hash object where it's remembered key and value information. Functions of this class are:
     - **```void deleteRecord()```**
     - **```HashObj<T, R>& operator= (HashObj<T, R> const& obj)```**
     - **```bool operator==(HashObj<T, R> const& obj)```**
@@ -95,30 +95,30 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
     - **```void setRecord(R* rec)```**
     - **```bool isEqualKey(T key)```**
     - **```friend ostream& operator<<(ostream& izlaz, HashObj<T, R>& obj)```**
-- **ScatterObj class** - this class inherits HashObj class and this class only add status where 0 is free, 1 deleted and 2 occupied location in the hash table. This class only have constructors, and no new functions.
-- **ChainedScatterObject class** - this class inherits ScatterObj class and add next element where it's puts information about next element as synonym.  This class only have constructors, and no new functions.
-- **HashTable class** - Basic structure for Hash table. Function of this data structure are:
+- **ScatterObj\<T,R\> class** - this class inherits HashObj class and this class only add status where 0 is free, 1 deleted and 2 occupied location in the hash table. This class only have constructors, and no new functions.
+- **ChainedScatterObject\<T,R\> class** - this class inherits ScatterObj class and add next element where it's puts information about next element as synonym.  This class only have constructors, and no new functions.
+- **HashTable\<T,R\> class** - Basic structure for Hash table. Function of this data structure are:
     - **``````**
-- **ChainedHashTable class** - this class inherits HastTable class. Functions of this class are:
+- **ChainedHashTable\<T,R\> class** - this class inherits HastTable class. Functions of this class are:
     - **``````**
-- **ChainedScatterTable** - this class inherits HashTable class. Functions of this class are:
+- **ChainedScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
     - **``````**
-- **OpenScatterTable** - this class inherits HashTable class. Functions of this class are:
+- **OpenScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
     - **``````**
 
 6. ## Binary Search Tree
 
-- **BSTNode class**
-- **BSTree class**
+- **BSTNode\<T\> class**
+- **BSTree\<T\> class**
 
 For example, creation of Binary search tree that consist of ObjType elements will be: **```BSTree<ObjType> tree```** Situation is the same as in single liked lists, only here every element have two pointers: left and right element, logic are the same.
 
 7. ## Graph
 
-- **LinkedNode class**
-- **Edge class**
-- **LinkedNode class**
-- **GraphAsLists class**
+- **LinkedNode\<T,W\> class**
+- **Edge\<T,W\> class**
+- **LinkedNode\<T,W\> class**
+- **GraphAsLists\<T,W\> class**
 
 For example, creation of Graph that consists of ObjType elements with WeightType will be: **```GraphAsLists<ObjType, WeightType> graf```**. Also graph use single linked list as auxilary structure so we dont need initial size.
 
