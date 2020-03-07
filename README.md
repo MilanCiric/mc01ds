@@ -106,7 +106,7 @@ Hash tables are simply lookup table where we have pair of key|value. Simple idea
     - **```unsigned int getLength()```**
     - **```virtual double getLoadFactor()```**1
     
-This class is virtual so it can have na object reference, so it's only used for inheritance to the other hash type classes
+    This class is virtual so it can't have na object reference, so it's only used for inheritance to the other hash type classes
 - **ChainedHashTable\<T,R\> class** - this class inherits HastTable class. Functions of this class are:
     - **```void insert(HashObj<T, R>* obj)```**
     - **```void withdraw(HashObj<T, R>* obj)```**
@@ -114,7 +114,7 @@ This class is virtual so it can have na object reference, so it's only used for 
     - **```HashObj<T, R>* find(T key)```**
     - **```void printAllRecords()```**
     
-For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
+    For example, creation of ChainedHashTable that consists of 100 ObjType elements with RecType will be:
 **```ChainedHashTable<ObjType, RecType> hash(100)```**
 - **ChainedScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
     - **```unsigned int h(ChainedScatterObject<T, R> obj)```**
@@ -123,7 +123,7 @@ For example, creation of ChainedHashTable that consists of 100 ObjType elements 
     - **```void withdraw(T key)```**
     - **```void printAllRecords()```**
     
-For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
+    For example, creation of ChainedScatterTable that consists of 100 ObjType elements with RecType will be:
 **```ChainedScatterTable<ObjType, RecType> hash(100)```**
 - **OpenScatterTable\<T,R\> class** - this class inherits HashTable class. Functions of this class are:
     - **```unsigned int h(ScatterObj<T, R> obj)```**
@@ -134,22 +134,67 @@ For example, creation of ChainedScatterTable that consists of 100 ObjType elemen
     - **```void withdraw(T key)```**
     - **```void printAllRecords()```**
     
-For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
+    For example, creation of OpenScatterTable that consists of 100 ObjType elements with RecType will be: 
 **```OpenScatterTable<ObjType, RecType> hash(100)```**
 
 6. ## Binary Search Tree
 
-- **BSTNode\<T\> class**
+- **BSTNode\<T\> class** - This class is only an euxilary one for later creation of Binary search tree structure. Functions of this class are:
+    - **```bool isLT(T el)```**
+    - **```bool isGT(T el)```**
+    - **```bool isEQ(T el)```**
+    - **```void setKey(T key)```**
+    - **```T getKey()```**
+    - **```void visit()```**
 - **BSTree\<T\> class**
+    - **```void deleteTree(BSTNode<T>* p)```**
+    - **```void deleteAll()```**
+    - **```bool isEmpty()```**
+    - **```void insert(T el)```**
+    - **```bool isInTree(T el)```**
+    - **```BSTNode<T>* search(T el)```**
+    - **```BSTNode<T>* search(BSTNode<T>* p, T el)```**
+    - **```void balance(int data[], int first, int last)```**
+    - **```void deleteByCopying(T el)```**
+    - **```void deleteByMergind(T el)```**
+    - **```void preorder()```**
+    - **```void inorder()```**
+    - **```void postorder()```**
+    - **```void inorder(BSTNode<T>* p)```**
+    - **```void preorder(BSTNode<T>* p)```**
+    - **```void postorder(BSTNode<T>* p)```**
+    - **```void breadthFirst()```**
+    - **```void iterativePreorder()```**
+    - **```void iterativeInorder()```**
+    - **```void iterativePostorder()```**
+    - **```void printNode(T el)```**
+    - **```void printNode(BSTNode<T>* p)```**
 
 For example, creation of Binary search tree that consist of ObjType elements will be: **```BSTree<ObjType> tree```** Situation is the same as in single liked lists, only here every element have two pointers: left and right element, logic are the same.
 
 7. ## Graph
 
 - **LinkedNode\<T,W\> class**
+    - **```void Visit()```**
 - **Edge\<T,W\> class**
-- **LinkedNode\<T,W\> class**
 - **GraphAsLists\<T,W\> class**
+    - **```bool insertNode(t pod)```**
+    - **```bool deleteNode(t pod)```**
+    - **```bool insertEdge(t a, t b)```**
+    - **```bool deleteEdge(t a, t b)```**
+    - **```void deleteEdgeToNode(LinkedNode<t, w>* ptr)```**
+    - **```LinkedNode<t, w>* findNode(t pod)```**
+    - **```Edge<t, w>* findEdge(t a, t b)```**
+    - **```LinkedNode<t, w>* maxExitingLevel()```**
+    - **```LinkedNode<t, w>* maxInputLevel()```**
+    - **```void nullEdgeNodes()```**
+    - **```void printGraph()```**
+    - **```long breadthTrav(t a)```**
+    - **```long depthTrav(t a)```**
+    - **```long topologicalOrderTrav()```**
+    - **```long findPathBreadth(t first, t last, t* arPath, int* lPath)```**
+    - **```long findPathBreadth(LinkedNode<t, w>* ptr, LinkedNode<t, w>* pEnd, t* arPath, int* lPath)```**
+    
 
 For example, creation of Graph that consists of ObjType elements with WeightType will be: **```GraphAsLists<ObjType, WeightType> graf```**. Also graph use single linked list as auxilary structure so we dont need initial size.
 
